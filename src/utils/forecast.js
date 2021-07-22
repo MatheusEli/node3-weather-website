@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         }else if(body.error){
             callback('Unable to find loaction. Try another search.', undefined)
         }else{
-            const answer = body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degress out. It feels like '+body.current.feelslike+ ' degress out.'
+            const answer = body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degress out. It feels like '+body.current.feelslike+ ' degress out. Humidity is '+body.current.humidity+'% period.'
             callback(undefined, answer)
         }
     })
